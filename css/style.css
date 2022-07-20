@@ -317,6 +317,10 @@ body {
     font-size: 2rem !important;
   }
 
+  .nav--header-1 {
+    padding-left: 0.5rem !important;
+  }
+
   .nav--header-1 > .nav__item:not(.nav__item--home) > .nav__link {
     background-color: #00000059;
     border-radius: 10px;
