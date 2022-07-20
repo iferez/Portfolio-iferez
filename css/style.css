@@ -200,6 +200,7 @@ body {
 
 .nav--header-1 > .nav__item.nav__item--active .nav--header-2 {
   visibility: visible;
+  width: 70%;
 }
 
 .nav--header-1 .nav__item--home {
@@ -210,7 +211,6 @@ body {
   padding: 0;
   transition: 0.6s;
 }
-
 
 .nav--header-1 .nav__item--home:hover {
   background-position: 8px 50%;
@@ -288,21 +288,23 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  .layout {
+    background-image: url("../responsive.png") !important;
+  }
 
   .layout__wrapper {
-    background-image: url("../responsive.png");
-   
+    background-image: url("../responsive.png") !important;
   }
   .nav--header {
     display: flex !important;
-    margin-top: 2rem !important;
+    margin-top: 3rem !important;
   }
 
   .nav__link {
-    font-size: 1rem !important;
+    font-size: 0.9rem !important;
     padding-left: 1rem !important;
     padding-top: 1.4rem !important;
-    width: 120px !important;
+    width: 110px !important;
   }
 
   .nav__item--home {
@@ -315,6 +317,12 @@ body {
     font-size: 2rem !important;
   }
 
+  .nav--header-1 > .nav__item:not(.nav__item--home) > .nav__link {
+    background-color: #00000059;
+    border-radius: 10px;
+    margin-right: 14px;
+  }
+
   .layout__frontdrop {
     margin-top: 100px !important;
     transform: translateX(0%) scaleX(1) !important;
@@ -322,7 +330,7 @@ body {
 
   .nav--header-2 {
     padding-left: 0px !important;
-    left: 5% !important;
+    left: 10% !important;
     display: block !important;
   }
 
@@ -334,7 +342,11 @@ body {
 
   .nav--header-2 > .nav__item > .nav__link {
     background-image: none !important;
-}
+  }
+
+  .nav--header-1 > .nav__item.nav__item--active .nav--header-2 {
+    width: 100% !important;
+  }
 
   .layout__wrapper {
     display: grid;
@@ -353,11 +365,11 @@ body {
     margin-top: 10px;
   }
 
-  .hero{
+  .hero {
     padding-top: 0rem !important;
   }
 
-  .hero-title{
+  .hero-title {
     font-size: 3.5rem;
     line-height: 1.2;
     margin-left: 2rem !important;
@@ -373,10 +385,10 @@ body {
     padding: 6rem 3rem 3rem;
     transform: translateY(-3rem);
     width: 100% !important;
-}
+  }
 
-.layout__backdrop,
-.layout__frontdrop {
-  background-color: #00000000;
-}
+  .layout__backdrop,
+  .layout__frontdrop {
+    background-color: #00000000;
+  }
 }
