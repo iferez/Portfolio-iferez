@@ -21,7 +21,7 @@ body {
 }
 
 .layout {
-  background-image: url("../workspace-1280538_1920.jpg");
+  background-image: url("../img/backimg.jpg");
   background-position: 0 0;
   background-size: cover;
   height: 100vh;
@@ -204,7 +204,7 @@ body {
 }
 
 .nav--header-1 .nav__item--home {
-  background-image: url("../iferez.png");
+  background-image: url("../img/iferez.png");
   background-position: 0px 50%;
   background-repeat: no-repeat;
   margin-bottom: 60px;
@@ -293,11 +293,11 @@ body {
 
 @media screen and (max-width: 768px) {
   .layout {
-    background-image: url("../responsive.png") !important;
+    background-image: url("../img/backimgmovil.png") !important;
   }
 
   .layout__wrapper {
-    background-image: url("../responsive.png") !important;
+    background-image: url("../img/backimgmovil.png") !important;
   }
   .nav--header {
     display: flex !important;
