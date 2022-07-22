@@ -22,6 +22,7 @@ for (let navItemIndex = 0; navItemIndex < items.length; ++navItemIndex) {
   stateItem.onClick = () => {
     const actualOnClick = () => {
       if (state.activeItem === navItemIndex) {
+        state.activeItem = false;
         return;
       }
       
@@ -31,7 +32,6 @@ for (let navItemIndex = 0; navItemIndex < items.length; ++navItemIndex) {
 
       if ('PARENT' === state.navigationItems[navItemIndex].type) {
         state.activeItem = navItemIndex;
-
         animateShow(state);
       }
     };
@@ -50,7 +50,6 @@ const animateShow = (state) => {
   const animation = anime.timeline();
   
   animation.add({
-    backgroundColor: state.navigationItems[state.activeItem].color,
     begin: () => {
       state.root.classList.add('nav--active');
     },
