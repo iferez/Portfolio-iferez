@@ -279,10 +279,11 @@ body {
   .hero-text {
     width: 30%;
     margin-right: 30%;
+    font-size: 1.3rem;
   }
 
-  .nav_hijo > .list_item > .ancla_item {
-    font-size: 1.75rem;
+  .nav_padre > .list_item:not(.logo) > .ancla_item {
+    font-size: 2.2rem;
   }
 }
 
@@ -294,6 +295,7 @@ body {
   .layout_contenedora {
     background-image: url("../img/backimgmovil.png") !important;
   }
+
   .ul_contenedor {
     display: flex !important;
     margin-top: 3rem !important;
