@@ -1,18 +1,12 @@
-const items = document.querySelectorAll('.nav--header-1 > .nav__item');
-const rootElement = document.querySelector('.layout');
-
-const colors = [
-  'hsla(14, 97%, 65%, 0.4)',
-];
-
+const items = document.querySelectorAll('.nav_padre > .list_item');
+const layout = document.querySelector('.layout');
 const state = {
   navigationItems: {},
-  root: rootElement,
+  root: layout,
 };
 
 for (let navItemIndex = 0; navItemIndex < items.length; ++navItemIndex) {
   const stateItem = {
-    color: colors[navItemIndex % colors.length],
     element: items[navItemIndex],
     id: navItemIndex,
     isActive: false,
@@ -25,7 +19,7 @@ for (let navItemIndex = 0; navItemIndex < items.length; ++navItemIndex) {
     stateItem.type = 'PARENT';
   }
   
-  stateItem.onClick = (event) => {
+  stateItem.onClick = () => {
     const actualOnClick = () => {
       if (state.activeItem === navItemIndex) {
         return;
@@ -54,7 +48,6 @@ for (let navItemIndex = 0; navItemIndex < items.length; ++navItemIndex) {
 
 const animateShow = (state) => {
   const animation = anime.timeline();
-  console.log(state.navigationItems[state.activeItem]);
   
   animation.add({
     backgroundColor: state.navigationItems[state.activeItem].color,
@@ -62,7 +55,7 @@ const animateShow = (state) => {
       state.root.classList.add('nav--active');
     },
     complete: () => {
-      state.navigationItems[state.activeItem].element.classList.add('nav__item--active');
+      state.navigationItems[state.activeItem].element.classList.add('list_item--active');
     },
     duration: 450,
     easing: 'easeOutExpo',
@@ -74,7 +67,7 @@ const animateShow = (state) => {
       {value: 0},
       {value: 1},
     ],
-    targets: '.layout__frontdrop',
+    targets: '.layout_body',
   })
   .add({
     duration: 70,
@@ -84,7 +77,7 @@ const animateShow = (state) => {
     delay: anime.stagger(70),
     opacity: [0, 1],
     translateY: ['100%', '0'],
-    targets: state.navigationItems[state.activeItem].childNavigation.querySelectorAll('.nav__item'),
+    targets: state.navigationItems[state.activeItem].childNavigation.querySelectorAll('.list_item'),
   });
   
   return animation;
@@ -107,18 +100,18 @@ const animateHide = (state, complete) => {
         .navigationItems[state.activeItem]
         .element
         .classList
-        .remove('nav__item--active')
+        .remove('list_item--active')
       ;
     },
     duration: 250,
     easing: 'easeOutCirc',
     scaleX: [
-      {value: 0,},
+      {value: 0},
     ],
     translateX: [
       {value: 0},
     ],
-    targets: '.layout__frontdrop',
+    targets: '.layout_body',
   });
   
   return animation;
@@ -142,7 +135,7 @@ const animateHide = (state, complete) => {
     duration: 350,
     delay: 1000,
     easing: 'easeOutCirc',
-    targets: '.layout__backdrop',
+    targets: '.layout_navegacion',
     scaleX: [0, 1],
   }).add({
     delay: anime.stagger(75),
@@ -150,10 +143,10 @@ const animateHide = (state, complete) => {
     easing: 'easeOutCirc',
     opacity: [0, 1],
     translateY: ['100%', '0%'],
-    targets: '.nav--header-1 > .nav__item:not(.nav__item--home)',
+    targets: '.nav_padre > .list_item:not(.logo)',
   }).add({
     easing: 'easeOutExpo',
-    targets: '.layout__backdrop',
+    targets: '.layout_navegacion',
     translateX: [
       {delay: 350, value: (-80) + '%'},
     ],
