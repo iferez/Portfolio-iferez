@@ -152,13 +152,13 @@ const animateHide = (state, complete) => {
   }).add({
     duration: 350,
     easing: 'easeOutExpo',
-    targets: '.hero-title',
+    targets: '.main-title',
     opacity: [0, 1],
     translateY: ['50px', '0'],
   }).add({
     duration: 400,
     easing: 'easeOutExpo',
-    targets: '.hero-text',
+    targets: '.main-text',
     opacity: [0, 1],
     translateY: ['0', '-3rem'],
   }, '-=100');
