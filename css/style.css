@@ -204,7 +204,7 @@ body {
   background-repeat: no-repeat;
   margin-bottom: 60px;
   padding: 0;
-  transition: 0.6s;
+  transition: 0.2s;
 }
 
 .nav_padre .logo:hover {
