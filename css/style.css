@@ -239,13 +239,17 @@ body {
   content: "";
   cursor: pointer;
   display: block;
-  margin-bottom: 6rem;
+  margin-bottom: 3.5rem;
   height: 30px;
   width: 30px;
 }
 
 .nav_hijo > .list_item {
   margin-bottom: 2.75rem;
+}
+
+.nav_hijo > .list_item em{
+  font-size: 1.2rem;
 }
 
 .nav_hijo > .list_item > .ancla_item {
@@ -349,8 +353,8 @@ body {
 
   .nav_hijo::before {
     background-size: 20px 20px !important;
-    margin-top: 6rem !important;
-    margin-bottom: 3rem !important;
+    margin-top: 4rem !important;
+    margin-bottom: 2.5rem !important;
   }
 
   .nav_hijo > .list_item > .ancla_item {
