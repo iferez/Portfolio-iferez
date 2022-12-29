@@ -219,6 +219,7 @@ body {
 
 .nav_hijo > .list_item > .ancla_item > em {
   font-weight: 300 !important;
+  font-size: 0.8rem;
 }
 
 .nav_hijo {
@@ -246,10 +247,6 @@ body {
 
 .nav_hijo > .list_item {
   margin-bottom: 2.75rem;
-}
-
-.nav_hijo > .list_item em{
-  font-size: 1.2rem;
 }
 
 .nav_hijo > .list_item > .ancla_item {
@@ -364,6 +361,10 @@ body {
 
   .nav_padre > .list_item.list_item--active .nav_hijo {
     width: 100% !important;
+  }
+
+  .nav_hijo > .list_item > .ancla_item > em {
+    font-size: 1.2rem;
   }
 
   .layout_contenedora {
