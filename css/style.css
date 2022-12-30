@@ -219,7 +219,7 @@ body {
 
 .nav_hijo > .list_item > .ancla_item > em {
   font-weight: 300 !important;
-  font-size: 0.8rem;
+  font-size: 1.3rem;
 }
 
 .nav_hijo {
@@ -364,7 +364,7 @@ body {
   }
 
   .nav_hijo > .list_item > .ancla_item > em {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
   }
 
   .layout_contenedora {
